@@ -1,0 +1,221 @@
+/* ---- import Google api ---- */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@100;300;400;500;600&family=Roboto:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Oswald:wght@700&family=Poppins:wght@100;300;400;500;600&family=Roboto:wght@400;500&display=swap');
+
+
+/* ----- reset some properties ----- */
+*,
+::after,
+::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --card-bg: rgba(26, 26, 26, 1);
+    --yellow: #e6b91e;
+}
+
+/*----- theme ---- */
+body {
+    background-color: rgb(0, 0, 0, 1);
+}
+
+/* ---- Navbar ---- */
+.navbar {
+    height: 4em;
+}
+/*---- Heading -----*/
+.h1,
+h1 {
+    font-size: calc(1.375rem + 1.5vw);
+}
+/* navbar link */
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+/* IMDB logo */
+#logo{
+    width: 4em;
+    height: 2em;
+}
+
+.logo-text{
+    margin-left: 1em;
+}
+
+/* ---- Favourite list button ---- */
+.navFavButton {
+    color: black;
+    background-color: #e6b91e;
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+}
+
+.navFavButton:hover {
+    background-color: black;
+    color: #e6b91e;
+}
+
+.favNotification {
+    display: none;
+}
+/* ----- Main Section ----- */
+main {
+    margin-top: 5em;
+}
+/* ---- Search text and favourite page contain total movies ---- */
+.searched-text-container,
+.favorite-msg-container {
+    display: flex;
+    font-size: 1.5rem;
+    width: auto;
+    margin-left: 2em;
+    color: ghostwhite;
+    font-family: 'Roboto Slab', serif;
+}
+
+.index-default-container {
+    height: 80vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.logoContainer {
+    height: 2rem;
+    width: 2rem;
+}
+
+
+.card {
+    margin-top: 100px;
+    background-color: var(--card-bg) !important;
+}
+
+.like-container {
+    height: 2em;
+    width: 2rem;
+    display: block;
+    border-radius: 50%;
+    background-color: white;
+    ;
+}
+
+.like {
+    height: 1.7rem;
+    width: 1.7rem;
+    display: block;
+    font-size: 1.5rem;
+    color: grey;
+    transition: all 0.5 seconds ease-in-out;
+}
+
+.like:hover {
+    color: red !important;
+    cursor: pointer !important;
+   
+}
+
+.like:active {
+    transform: scale(1.25);
+}
+
+.added-to-fav {
+    color: red !important;
+}
+
+a {
+    width: fit-content !important;
+}
+
+ul {
+    list-style: none;
+    display: inline-block;
+}
+
+.pagination li div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
+    font-size: 1em;
+    background-color: rgba(102, 99, 98, 0.7);
+    color: white;
+    margin: 0.2rem;
+}
+
+.pagination>li:not(.current) :hover {
+    cursor: pointer;
+    background-color: rgba(26, 26, 26, 1)
+}
+
+.active-page {
+    background-color: rgba(26, 26, 26, 1) !important;
+    ;
+}
+
+.active-page:hover {
+    cursor: default !important;
+}
+
+.dots {
+    background-color: inherit !important;
+    font-size: 0.4em !important;
+}
+
+@media(max-width:632px) {
+    .navbar {
+        margin-top: -20px;
+        height: 25%;
+
+    }
+
+    .container-fluid {
+        margin-top: 55px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .col-2 {
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+        margin-top: 0.7em;
+        margin-left: 0.5em;
+    }
+
+    .form-control {
+        margin-top: 0.5em;
+    }
+
+    #movie-details-container {
+        margin-top: 15em;
+    }
+
+    .noResults img {
+        width: 40%;
+
+    }
+
+    .noResults {
+        margin-top: 2em;
+    }
+
+    .marginNav {
+        margin-top: -25px;
+    }
+
+    .card-container {
+        height: 100%;
+    }
+
+}
